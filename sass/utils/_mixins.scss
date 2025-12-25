@@ -1,0 +1,232 @@
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+
+    .title_hero {
+      font-size: 16px;
+    }
+    .title_text {
+      font-size: 40px;
+    }
+    .text_hero {
+      max-width: 70%;
+    }
+    .image_hero {
+      width: 300px;
+      height: 300px;
+    }
+    .orbit {
+      display: none;
+    }
+    .first_button {
+      max-width: 100%;
+    }
+    .second_button {
+      max-width: 100%;
+    }
+
+    .title_about,
+    .title_portfolio,
+    .title_contacts {
+      font-size: 32px;
+    }
+
+    .list_icon {
+      width: 100%;
+    }
+
+    .center_text {
+      width: 100%;
+    }
+  }
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+    .list {
+      flex-direction: column;
+      gap: 32px;
+      font-size: 22px;
+    }
+    .first_button {
+      max-width: 100%;
+    }
+    .second_button {
+      max-width: 100%;
+    }
+    .image_about {
+      width: 100%;
+    }
+    .section_list {
+      max-width: 250px;
+    }
+    .burger {
+      display: flex;
+    }
+
+    .navigation {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: 0.35s ease;
+    }
+
+    .menu-toggle:checked ~ .navigation {
+      transform: translateX(0);
+    }
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 64px;
+    }
+
+    .div_hero {
+      align-items: center;
+    }
+
+    .text_hero {
+      max-width: 90%;
+    }
+
+    .buttons {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .first_button,
+    .second_button {
+      width: 100%;
+    }
+    .image_hero {
+      width: 320px;
+      height: 320px;
+    }
+
+    .orbit {
+      left: 1%;
+      top: 1%;
+      width: 320px;
+      height: 320px;
+    }
+
+    .status {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+    }
+
+    .div_about {
+      flex-direction: column;
+    }
+
+    .div_list {
+      width: 100%;
+    }
+
+    .text_about {
+      width: 100%;
+    }
+    .button_about {
+      width: 100%;
+    }
+    .list_about {
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .list_div {
+      align-items: center;
+    }
+    .list_text {
+      width: 80%;
+      text-align: center;
+    }
+    .list_text_2 {
+      width: 80%;
+      text-align: center;
+    }
+    .list_icon {
+      width: 45%;
+    }
+
+    .div_portfolio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text_portfolio {
+      text-align: center;
+    }
+
+    .list_portfolio {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contacts {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contacts_div {
+      margin: 40px 0;
+    }
+
+    .contacts-form {
+      width: 100%;
+    }
+
+    .row_1,
+    .row_2 {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+}
+@mixin desktop {
+  @media (max-width: 1240px) {
+    @content;
+    .header_div {
+      width: 100%;
+      padding: 0 40px;
+    }
+
+    .hero {
+      gap: 100px;
+    }
+
+    .image_hero {
+      width: 420px;
+      height: 420px;
+    }
+
+    .orbit {
+      width: 400px;
+      height: 400px;
+    }
+
+    .div_about {
+      gap: 40px;
+    }
+
+    .list_portfolio {
+      gap: 60px;
+    }
+
+    .contacts_div {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

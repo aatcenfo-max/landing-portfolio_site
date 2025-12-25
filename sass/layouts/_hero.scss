@@ -1,0 +1,131 @@
+@use "../utils/mixins" as *;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 180px;
+  padding-bottom: 91px;
+  gap: 160px;
+}
+.div_hero {
+  display: flex;
+  flex-direction: column;
+}
+.title_hero {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-secondary);
+  width: 14.2ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(22), infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14.2ch;
+    border-color: transparent;
+  }
+}
+.title_text {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: var(--text);
+  width: 14.2ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.7s steps(22), infinite;
+}
+.text_hero {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.buttons {
+  margin-top: 63px;
+  display: flex;
+  gap: 16px;
+}
+.first_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: var(--text);
+  width: 143px;
+  height: 40px;
+}
+.second_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg);
+  color: var(--text);
+  width: 143px;
+  height: 40px;
+}
+.profile-wrapper {
+  position: relative;
+}
+
+.image_hero {
+  width: 500px;
+  height: 501px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--accent);
+  padding: 15px;
+}
+.status {
+  position: absolute;
+  bottom: 80px;
+  left: -1px;
+  background: var(--status);
+  color: var(--status_text);
+  padding: 19px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  z-index: 10;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.orbit {
+  position: absolute;
+  left: 13px;
+  bottom: 20px;
+  width: 475px;
+  height: 476px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+}
+.dot {
+  position: absolute;
+  right: 115px;
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  transform: translateX(-10%);
+  box-shadow: 0 0 8px var(--accent), 0 0 20px var(--accent),
+    0 0 35px var(--accent), 0 0 60px var(--accent);
+}
+@include phone;
+@include tablet;
+@include desktop;

@@ -1,0 +1,32 @@
+.dark-theme {
+  --bg: #000000;
+  --text: #fff;
+  --text-secondary: #828282;
+  --accent: #27ae60;
+  --card-bg: #fff;
+  --border: #fff;
+  --horder: aqua;
+  --status: #fff;
+  --status_text: #000000;
+  --card-title: #132238;
+  --card-text: #556070;
+  --icon: invert(0);
+  --form: #555;
+  --form-input: #fff;
+}
+.light-theme {
+  --bg: #fff;
+  --text: #000000;
+  --text-secondary: #525252;
+  --accent: #56c584;
+  --border: #333;
+  --card-bg: #111111;
+  --horder: #5d9eff;
+  --status: #000000;
+  --status_text: #fff;
+  --card-title: #5d9eff;
+  --card-text: #bbd6ff;
+  --icon: invert(1);
+  --form: #000000;
+  --form-input: #000000;
+}

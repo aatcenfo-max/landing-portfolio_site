@@ -1,0 +1,122 @@
+@use "../utils/mixins" as *;
+.center_text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  width: 441px;
+}
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts_div {
+  margin-top: 100px;
+  margin-left: 185px;
+  margin-right: 185px;
+  margin-bottom: 133px;
+  width: 230px;
+}
+.title_contacts {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--text);
+}
+.text_contacts {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: var(--text);
+}
+.list_contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section_contacts_text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text);
+}
+.icon_call {
+  filter: var(--icon);
+}
+.icon_mail {
+  filter: var(--icon);
+}
+.icon_map {
+  filter: var(--icon);
+}
+.contacts-form {
+  text-align: center;
+  width: 512px;
+}
+.form_div {
+  margin-top: 56px;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-bottom: 32px;
+}
+.row_1 {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+.row_2 {
+  display: flex;
+  gap: 32px;
+}
+.contacts-form input {
+  border: none;
+  border-bottom: 1px solid var(--form);
+  width: 100%;
+  background: transparent;
+  padding: 5px 5px;
+  font-size: 16px;
+  color: var(--form-input);
+}
+
+.contacts-form textarea {
+  margin-top: 38px;
+  width: 100%;
+  background: transparent;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: var(--form-input);
+  border-radius: 4px;
+}
+
+textarea {
+  height: 96px;
+  resize: none;
+}
+.contacts-form input:focus {
+  transition: 0.5s;
+  outline: none;
+  border-bottom: 1px solid #27ae60;
+}
+.contacts-form textarea:focus {
+  transition: 0.5s;
+  outline: none;
+  border-color: #27ae60;
+}
+.contacts-form input:invalid,
+.contacts-form textarea:invalid {
+  border-color: #ff4d4d;
+}
+.btn {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: var(--accent);
+  border: none;
+  color: var(--text);
+  font-size: 16px;
+  border-radius: 6px;
+}
+@include phone;
+@include tablet;
+@include desktop;

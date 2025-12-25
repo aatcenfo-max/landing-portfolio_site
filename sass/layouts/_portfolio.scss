@@ -1,0 +1,112 @@
+@use "../utils/mixins" as *;
+.portfolio {
+  padding-bottom: 72px;
+  padding-top: 72px;
+}
+.div_portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--text);
+}
+.title_portfolio {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--text);
+}
+.text_portfolio {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text);
+  max-width: 576px;
+}
+.list_portfolio {
+  display: flex;
+  margin-top: 64px;
+  gap: 105px;
+}
+
+.section_list {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFade 0.7s ease forwards;
+}
+
+.list_portfolio .section_list:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.list_portfolio .section_list:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.list_portfolio .section_list:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.div_section {
+  padding: 16px 16px;
+  background-color: var(--card-bg);
+}
+.title_list {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--card-title);
+}
+.text_list {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: justify;
+  color: var(--card-text);
+}
+.card_image {
+  position: relative;
+  background-color: var(--card-bg);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.card_image:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+}
+.card_image img {
+  transition: transform 0.45s ease;
+}
+.card_image:hover img {
+  transform: scale(1.1);
+}
+.link_section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  padding: 8px 24px;
+  background: var(--accent);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--text);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card_image:hover .link_section {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+@include phone;
+@include tablet;
+@include desktop;
